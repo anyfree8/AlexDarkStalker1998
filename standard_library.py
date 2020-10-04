@@ -1,4 +1,4 @@
-from itertools import combinations_with_replacement
+from itertools import product
 
 
 def max_in_dict(dict_):
@@ -69,12 +69,12 @@ def standard_library_task3():
     alphabet = [str(i) for i in input().split()]
     if len_of_palindrome % 2 == 0:
         n = len_of_palindrome // 2
-        for i in combinations_with_replacement("".join(alphabet), n):
+        for i in product("".join(alphabet), repeat=n):
             print(*i, end=" ")
             print(*i[::-1], end="\n")
     else:
         n = (len_of_palindrome + 1) // 2
-        for i in combinations_with_replacement("".join(alphabet), n):
+        for i in product("".join(alphabet), repeat=n):
             print(*i, end=" ")
             print(*i[0::-1], end="\n")
 
