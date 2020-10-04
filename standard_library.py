@@ -76,7 +76,7 @@ def standard_library_task3():
         n = (len_of_palindrome + 1) // 2
         for i in product("".join(alphabet), repeat=n):
             print(*i, end=" ")
-            print(*i[0::-1], end="\n")
+            print(*i[1::-1], end="\n")
 
 
 
